@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 
 """\
-標準入力に与えられるメールに関するデータを取得し、
-実行時のプロセスの環境変数等と併せてINFOレベルのログにダンプする。
-また標準出力に対して RFC 3463 に基づいたエラーメッセージを出力し、
-プロセス自身はエラー終了する。
+標準入力に与えられるメールに関するデータを取得し、標準ではsyslogにダンプする
 
 例えば /etc/aliases に次のように記述することで使用する。MTAはPostfixが前提。
 
-capture:  "|/path/to/capture.py /tmp/capture.log"
+capture:  "|/path/to/capture.py"
 """
 
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
